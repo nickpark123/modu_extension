@@ -1,0 +1,496 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+    Arial, sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fff;
+  min-width: 320px;
+  max-width: 360px;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+
+.header {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #111;
+}
+
+.title-ko {
+  font-size: 11px;
+  font-weight: 500;
+  color: #999;
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #888;
+}
+
+/* ── Home action buttons ─────────────────────────────── */
+
+.actions {
+  display: flex;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.btn {
+  flex: 1;
+  padding: 7px 4px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fafafa;
+  color: #333;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.btn:active {
+  background: #e8e8e8;
+}
+
+.btn-primary {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #333;
+  border-color: #333;
+}
+
+/* ── Home placeholder sections ───────────────────────── */
+
+.sections {
+  padding: 10px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section-header {
+  padding: 5px 10px;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 10px;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-body {
+  padding: 8px 10px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.placeholder {
+  font-size: 11px;
+  color: #bbb;
+  font-style: italic;
+}
+
+/* ── Shared form chrome ──────────────────────────────── */
+
+.view {
+  display: flex;
+  flex-direction: column;
+  max-height: 580px;
+  overflow-y: auto;
+}
+
+.nav {
+  padding: 10px 16px 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  color: #111;
+}
+
+.form {
+  padding: 10px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.2px;
+}
+
+.form-restaurant-name {
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+  margin-top: -6px;
+}
+
+/* ── Form fields ─────────────────────────────────────── */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.required {
+  color: #e05;
+}
+
+.optional {
+  font-weight: 400;
+  color: #aaa;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.1s;
+}
+
+.form-input:focus {
+  border-color: #111;
+}
+
+.form-input.input-error {
+  border-color: #e05;
+}
+
+.form-textarea {
+  resize: none;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.error-msg {
+  font-size: 11px;
+  color: #e05;
+}
+
+/* ── Segmented / group buttons ───────────────────────── */
+
+.btn-group {
+  display: flex;
+  gap: 4px;
+}
+
+.group-btn {
+  flex: 1;
+  padding: 6px 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 11px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+
+.group-btn:hover {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+
+.group-btn.active {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+/* ── Star rating ─────────────────────────────────────── */
+
+.star-group {
+  display: flex;
+  gap: 4px;
+}
+
+.star-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 16px;
+  color: #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.1s, border-color 0.1s, background 0.1s;
+  padding: 0;
+}
+
+.star-btn:hover,
+.star-btn.active {
+  color: #f5a623;
+  border-color: #f5a623;
+  background: #fff9ee;
+}
+
+/* ── Tag pills ───────────────────────────────────────── */
+
+.tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag-btn {
+  padding: 4px 9px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background: #fafafa;
+  font-size: 11px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+  white-space: nowrap;
+}
+
+.tag-btn:hover {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+
+.tag-btn.active {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+/* ── Full-width CTA button ───────────────────────────── */
+
+.btn-full {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.1s, opacity 0.1s;
+  margin-top: 4px;
+}
+
+.btn-primary-full {
+  background: #111;
+  color: #fff;
+}
+
+.btn-primary-full:hover:not(:disabled) {
+  background: #333;
+}
+
+.btn-primary-full:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Hint text ───────────────────────────────────────── */
+
+.hint {
+  font-size: 10px;
+  color: #aaa;
+}
+
+/* ── Ghost full-width button ─────────────────────────── */
+
+.btn-ghost-full {
+  background: transparent;
+  color: #666;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-ghost-full:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+/* ── Detection loading state ─────────────────────────── */
+
+.detection-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 32px 16px;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e0e0e0;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-label {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ── Detection contextual message ────────────────────── */
+
+.detection-message {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-top: -4px;
+}
+
+/* ── Confidence badge ────────────────────────────────── */
+
+.confidence-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  width: fit-content;
+}
+
+.confidence-high {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.confidence-medium {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.confidence-low {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.confidence-none {
+  background: #f5f5f5;
+  color: #999;
+}
+
+/* ── Detection metadata rows ─────────────────────────── */
+
+.detection-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.detection-meta-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.detection-meta-key {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-size: 10px;
+  width: 40px;
+}
+
+.detection-meta-val {
+  color: #444;
+  word-break: break-all;
+}
+
+.detection-url {
+  font-size: 10px;
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+  display: inline-block;
+}

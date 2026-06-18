@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Modu",
+  "version": "0.1.0",
+  "description": "모두 — Your personal Korean restaurant trust layer",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Modu"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": []
+}
