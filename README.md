@@ -1,6 +1,6 @@
 # 모두 (Modu)
 
-Korean restaurant discovery — a personal trust layer across Naver Map, KakaoMap, Google Maps, and more.
+Korean restaurant discovery: an aggregation layer across Naver Map, KakaoMap, Google Maps, and more.
 
 ## Prerequisites
 
